@@ -16,11 +16,11 @@ app = FastAPI()
 # Setup environment variables
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
-environment = os.getenv("PINECONE_ENV")
+# environment = os.getenv("PINECONE_ENV")
 index_name = os.getenv("PINECONE_INDEX")
 
 # Initialize pinecone client
-pinecone.init(api_key=pinecone_api_key, environment=environment)
+pinecone.init(api_key=pinecone_api_key)
 index = pinecone.Index(index_name)
 
 # Middleware to secure HTTP endpoint
