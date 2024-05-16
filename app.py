@@ -26,7 +26,7 @@ if index_name not in pinecone.list_indexes().names():
         metric='euclidean',
         spec=ServerlessSpec(
             cloud='aws',  # or 'gcp' if using Google Cloud
-            region='us-west-2'  # or any other region
+            region='us-east-1'  # or any other region
         )
     )
 
